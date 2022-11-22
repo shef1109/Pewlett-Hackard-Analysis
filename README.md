@@ -16,14 +16,28 @@ We will be gathering the required data by querying a database using SQL. Each of
   * We will create a mentorship-eligibility table that holds the current employees who were born between January 1, 1965 and December 31, 1965.
   
   ## Results
-  * Information on employees retiring in the near future 
+* Information on employees retiring in the near future 
  	 * Gets the employee number, first name, last name, title, title from date and title to date for each employee who was born between 1952 and 1995
 	 * [Full Export]( https://github.com/shef1109/Pewlett-Hackard-Analysis/blob/723e1df7025ecf23c9826a3cb8f6ebc3266b188d/Data/retirement_titles.csv)
  	 * Data Sample
  	 
   ![retirement_titles](Data/retirement_titles.png)
   
-  * Current Titles of Employees 
+* Current Titles of Employees 
    	 * Gets the employee number, first name, last name, and only the current title for each employee in the previous table 
-	 * [Full Export]( https://github.com/shef1109/Pewlett-Hackard-Analysis/blob/723e1df7025ecf23c9826a3cb8f6ebc3266b188d/Data/retirement_titles.csv)
+	 * [Full Export](https://github.com/shef1109/Pewlett-Hackard-Analysis/blob/bc05f3cbb80929bb2626d8bf530ec93248a13720/Data/unique_titles.csv )
  	 * Data Sample
+ 
+ ![unique_titles](Data/unique_titles.png)
+
+* Titles of employees retiring in the near future
+	* Gets a count of employees who are about to retire by each title 
+	* [Full Export](https://github.com/shef1109/Pewlett-Hackard-Analysis/blob/bc05f3cbb80929bb2626d8bf530ec93248a13720/Data/retiring_titles.csv)
+	* Data 
+
+![retiring_titles](Data/retiring_titles.png)
+
+* Employees available for mentorship 
+	* Gets employee number, first name, last name, birth date, title from date, and title to date for each employee where with a birthday between January 1, 1965 and December 31, 1965
+	* [Full Export]( https://github.com/mitchell-alexleigh/Pewlett-Hackard-Analysis/blob/main/Data/mentorship_eligibilty.csv)
+	* Data Sample 
