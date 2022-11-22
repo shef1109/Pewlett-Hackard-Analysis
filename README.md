@@ -16,7 +16,8 @@ We will be gathering the required data by querying a database using SQL. Each of
   * We will create a mentorship-eligibility table that holds the current employees who were born between January 1, 1965 and December 31, 1965.
   
   ## Results
-* The first question asked is how many employees are in a position to retire? To visualize question, it will be broken down into sub-questions.
+* The first question asked is how many employees are in a position to retire? To visualize this question, it will be broken down into sub-questions.
+
 	* Information on employees retiring in the near future 
  	 	* Gets the employee number, first name, last name, title, title from date and title to date for each employee who was born between 1952 and 1995.  This puts us close to our answer, but not quite because this list includes many duplicate entries for employees who have multiple titles.
 	 	* [Full Export]( https://github.com/shef1109/Pewlett-Hackard-Analysis/blob/723e1df7025ecf23c9826a3cb8f6ebc3266b188d/Data/retirement_titles.csv)
@@ -40,6 +41,7 @@ We will be gathering the required data by querying a database using SQL. Each of
 	
 	
 * For the second question we need to compile a list of all the current employees eligible for a mentorship program. This one is a little more straight-forward. All we have to do is adjust or original query birthdate range and add a second filter, to filter out employees no longer employed.
+
 	* Employees available for mentorship 
 	* Gets employee number, first name, last name, birth date, title from date, and title to date for each employee where with a birthday between January 1, 1965 and December 31, 1965, and filter by those still employeed by Pewlett-Hackard using to_date = 9999-01-01.
 	* [Full Export](https://github.com/shef1109/Pewlett-Hackard-Analysis/blob/66dcc7e5f9c80aced1b8f897f8f6fecaa7564c77/Data/mentorship_eligibilty.csv)
@@ -49,9 +51,12 @@ We will be gathering the required data by querying a database using SQL. Each of
 
 ## Summary
 ### How many roles will need to be filled as the "silver tsunami" begins to make an impact?
-72,458 Employees will retire in the near future
+By modifying our original Retirement Title count table to only include those employees who are actively working at Pewlett-Hackard, we can see that 33,118 employees will retire in the near future.
+
+![current_count-title](Data/current_count_title.png)
+
 
 ### Are there enough qualified, retirement-ready employees in the departments to mentor the next generation of Pewlett Hackard employees?
-Looking at the following table, we can see that it is not likely that Pewlett-Hackard would have enough mentors to guide any new hires.
+Looking at the following table of qualified mentors by title, we can see that it is not likely that Pewlett-Hackard would have enough mentors to guide any new hires based on the number of employees that are ready to retire in the near future.
 
 ![mentor_count_title](Data/mentor_count_title.png)
