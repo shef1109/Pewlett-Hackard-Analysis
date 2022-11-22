@@ -17,7 +17,13 @@ We will be gathering the required data by querying a database using SQL. Each of
   
   ## Results
   * Information on employees retiring in the near future 
-  * Gets the employee number, first name, last name, title, title from date and title to date for each employee who was born between 1952 and 1995
-	* [Full Export]( https://github.com/shef1109/Pewlett-Hackard-Analysis/blob/723e1df7025ecf23c9826a3cb8f6ebc3266b188d/Data/retirement_titles.csv)
-  * Data Sample
+ 	 * Gets the employee number, first name, last name, title, title from date and title to date for each employee who was born between 1952 and 1995
+	 * [Full Export]( https://github.com/shef1109/Pewlett-Hackard-Analysis/blob/723e1df7025ecf23c9826a3cb8f6ebc3266b188d/Data/retirement_titles.csv)
+ 	 * Data Sample
+ 	 
   ![retirement_titles](Data/retirement_titles.png)
+  
+  * Current Titles of Employees 
+   	 * Gets the employee number, first name, last name, and only the current title for each employee in the previous table 
+	 * [Full Export]( https://github.com/shef1109/Pewlett-Hackard-Analysis/blob/723e1df7025ecf23c9826a3cb8f6ebc3266b188d/Data/retirement_titles.csv)
+ 	 * Data Sample
