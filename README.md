@@ -24,20 +24,8 @@ We will be gathering the required data by querying a database using SQL. Each of
  	 	* Data Sample
  	 
 ![retirement_titles](Data/retirement_titles.png)
-  
-	* Current Titles of Employees 
-   	 	* Gets the employee number, first name, last name, and only the current title for each employee in the previous table (removes duplicates). 
-	 	* [Full Export](https://github.com/shef1109/Pewlett-Hackard-Analysis/blob/bc05f3cbb80929bb2626d8bf530ec93248a13720/Data/unique_titles.csv )
- 	 	* Data Sample
 
-![unique_titles](Data/unique_titles.png)
-
-	* Titles of employees retiring in the near future
-		* Gets a count of employees who are about to retire by each title 
-		* [Full Export] (https://github.com/shef1109/Pewlett-Hackard-Analysis/blob/b2f5d8cc63fe1a56d58c21b549c2790738f02202/Data/retiring_titles.csv )
-		* Data
-		
-![retiring_titles](Data/retiring_titles.png)
+	
 	
 	
 * For the second question we need to compile a list of all the current employees eligible for a mentorship program. This one is a little more straight-forward. All we have to do is adjust or original query birthdate range and add a second filter, to filter out employees no longer employed.
