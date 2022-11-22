@@ -267,4 +267,4 @@ FROM current_emp as ce
 		ON (de.dept_no = d.dept_no)
 WHERE d.dept_name IN ('Sales', 'Development')
 ORDER BY ce.emp_no;
-select * from sales_dev
+select * from sales_dev;
