@@ -63,3 +63,35 @@ SELECT * FROM mentorship_eligibility;
 
 
 -- DELIVERABLE 3: A WRITTEN REPORT ON THE EMPLOYEE DATABASE ANALYSIS
+-- Provide two additional queries or tables that may provide more insight into the upcoming "silver tsunami"
+-- QUERY/TABLE 1: Get the number of eligible mentors grouped by title
+SELECT COUNT(title) count, title
+INTO mentor_count_title
+FROM mentorship_eligibility
+GROUP BY (title) 
+ORDER BY count DESC;
+SELECT * FROM mentor_count_title;
+
+-- QUERY/TABLE 2: Get list of current employees eligible for retirement 
+SELECT DISTINCT ON (emp_no)
+        ce.emp_no, 
+        ce.first_name,
+        ce.last_name,
+        ti.title,
+        ti.from_date,
+        ti.to_date
+INTO current_retirement_titles
+FROM current_emp as ce
+INNER JOIN titles as ti
+ON ce.emp_no = ti.emp_no
+ORDER BY emp_no, from_date DESC;
+SELECT * FROM current_retirement_titles;
+
+-- QUERY/TABLE 3: Get a table of the title count for current employees
+SELECT COUNT(title) count, title
+INTO current_count_title
+FROM current_retirement_titles
+GROUP BY (title) 
+ORDER BY count DESC;
+SELECT * FROM current_count_title;
+
