@@ -22,22 +22,23 @@ We will be gathering the required data by querying a database using SQL. Each of
 	 	* [Full Export]( https://github.com/shef1109/Pewlett-Hackard-Analysis/blob/723e1df7025ecf23c9826a3cb8f6ebc3266b188d/Data/retirement_titles.csv)
  	 	* Data Sample
  	 
-  ![retirement_titles](Data/retirement_titles.png)
+![retirement_titles](Data/retirement_titles.png)
   
 	* Current Titles of Employees 
    	 	* Gets the employee number, first name, last name, and only the current title for each employee in the previous table (removes duplicates). 
 	 	* [Full Export](https://github.com/shef1109/Pewlett-Hackard-Analysis/blob/bc05f3cbb80929bb2626d8bf530ec93248a13720/Data/unique_titles.csv )
  	 	* Data Sample
 
- ![unique_titles](Data/unique_titles.png)
-   
-	* Titles of employees retiring in the near future
-		* Gets a count of employees who are ready to retire by each title, and provide a total count.
-		* [Full Export](https://github.com/shef1109/Pewlett-Hackard-Analysis/blob/66dcc7e5f9c80aced1b8f897f8f6fecaa7564c77/Data/retiring_titles.csv)
-		* Data Sample
-		
-![retiring_titles](Data/retiring_titles.csv)
+![unique_titles](Data/unique_titles.png)
 
+	* Titles of employees retiring in the near future
+		* Gets a count of employees who are about to retire by each title 
+		* [Full Export] (https://github.com/shef1109/Pewlett-Hackard-Analysis/blob/b2f5d8cc63fe1a56d58c21b549c2790738f02202/Data/retiring_titles.csv )
+		* Data
+		
+![retiring_titles](Data/retiring_titles.png)
+	
+	
 * For the second question we need to compile a list of all the current employees eligible for a mentorship program. This one is a little more straight-forward. All we have to do is adjust or original query birthdate range and add a second filter, to filter out employees no longer employed.
 	* Employees available for mentorship 
 	* Gets employee number, first name, last name, birth date, title from date, and title to date for each employee where with a birthday between January 1, 1965 and December 31, 1965, and filter by those still employeed by Pewlett-Hackard using to_date = 9999-01-01.
@@ -48,3 +49,9 @@ We will be gathering the required data by querying a database using SQL. Each of
 
 ## Summary
 ### How many roles will need to be filled as the "silver tsunami" begins to make an impact?
+72,458 Employees will retire in the near future
+
+### Are there enough qualified, retirement-ready employees in the departments to mentor the next generation of Pewlett Hackard employees?
+Looking at the following table, we can see that it is not likely that Pewlett-Hackard would have enough mentors to guide any new hires.
+
+![mentor_count_title](Data/mentor_count_title.png)
